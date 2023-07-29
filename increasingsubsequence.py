@@ -40,12 +40,14 @@ class Solution:
             #type arr: list of int
             #return type: int
             ans = 0
-            pre = arr[0] -1
-            maxx = 0
-            for i in arr:
-                if  i > pre:
+            mi = arr[0]
+            for i in range (1,len(arr)):
+                if  arr[i] < mi:
+                    print(arr[i])
                     ans += 1
-                pre = i
+                else:
+                    mi = arr[i]
+
             #TODO: Write code below to return an int with the solution to the prompt.
             return ans
 
